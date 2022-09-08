@@ -1,34 +1,30 @@
-# Housing Price Prediction
->  This assignment is a programming assignment wherein it is built a multiple linear regression model to detect the predictors of the Sales Price of the House.
+# BoomBikes Sharing Linear Regression Assignment.
+> This assignment is a programming assignment wherein it is built a multiple linear regression model for the prediction of demand for shared bikes.
 
 
 ## Table of Contents
 * [General Info](#general-information)
-* [Conclusions](#conclusions)
 * [Technologies Used](#technologies-used)
-
+* [Conclusions](#conclusions)
+* [Acknowledgements](#acknowledgements)
 
 ## General Information
-A US-based housing company named Surprise Housing has decided to enter the Australian market. The company uses data analytics to purchase houses at a price below their actual values and flip them on at a higher price. For the same purpose, the company has collected a data set from the sale of houses in Australia. The data is provided in the CSV file.
+- A US bike-sharing provider BoomBikes has recently suffered considerable dips in their revenues due to the ongoing Corona pandemic. The company is finding it very difficult to sustain in the current market scenario. So, it has decided to come up with a mindful business plan to be able to accelerate its revenue as soon as the ongoing lockdown comes to an end, and the economy restores to a healthy state. In such an attempt, BoomBikes aspires to understand the demand for shared bikes among the people after this ongoing quarantine situation ends across the nation due to Covid-19. They have planned this to prepare themselves to cater to the people's needs once the situation gets better all around and stand out from other service providers and make huge profits. 
+- So in this Assignment analysed the factors affecting the demand for the shared bikes.
+- A data set is provided for the year 2018 & 2019 which is pre-covid19 Era.
 
-The company is looking at prospective properties to buy to enter the market. You are required to build a regression model using regularisation in order to predict the actual value of the prospective properties and decide whether to invest in them or not.
-The company wants to know:
-- Which variables are significant in predicting the price of a house, and
-- How well those variables describe the price of a house.
-Also, determine the optimal value of lambda for ridge and lasso regression.
-
-
+<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 ## Conclusions
-* Hyperparameter Lambda:
-	- Ridge : 1.0
-	-Lasso : 0.0001
+- The variables 'year', 'workingday', 'temp', and months 'Sep'(Aoril to October Bike rental increases, with september at peak) , weekend on 'Sat', season time 'summer' & 'winter' have a positive impact on the count of bike rentals.
+- The variables 'Light Snow','Mist + Cloudy','spring'  have a negative impact on the count of bike rentals.
+-  Hence, bike demand will be high in the 
+   - months of April to October especially when temperature is comfortable
+   - low wind speed , 
+   - low rain and snow as well as a misty or cloudy atmosphere. 
+   - winter than to summer.
+   - coming years
 
-* Following factors are the good predictor and impact on the sales price of House and are possitively correlated:
-	- Ridge : OverallQual, 1stFlrSF, OverallCond, TotalBsmtSF, 2ndFlrSF, GarageArea, BsmtQual, MSZonoing_FV(Floating Village
-			  Residential), MSZonoing_RL(Residential Low Density), Foundation Slab.
-	- Lasso : OverallQual, 1stFlrSF, TotalBsmtSF, OverallCond, 2ndFlrSF, GarageArea, BsmtQual, LotArea, Foundation Slab,
-              KitchenQual.
 
 
 ## Technologies Used
@@ -40,5 +36,6 @@ Also, determine the optimal value of lambda for ridge and lasso regression.
 - MinMaxScaler from sklearn.preprocessing
 - RFE from sklearn.feature_selection
 - LinearRegression from sklearn.linear_model
+- sm from statsmodels.api
+- variance_inflation_factor from statsmodels.stats.outliers_influence
 - r2_score from sklearn.metrics
-
